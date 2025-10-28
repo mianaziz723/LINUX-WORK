@@ -1,0 +1,78 @@
+
+🧾 **Linux User and Group Management (CentOS) – Practical Commands Summary**
+
+**1. User Management**
+
+| Command                 | Description                                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------------------------ |
+| `whoami`                | Displays the current logged-in username.                                                         |
+| `id <username>`         | Shows user ID (UID), group ID (GID), and group memberships.                                      |
+| `useradd <username>`    | Creates a new user account. <br>Example: `useradd ansible`                                       |
+| `passwd <username>`     | Sets or changes the password for a user. <br>Example: `passwd ansible`                           |
+| `userdel <username>`    | Deletes a user account (keeps home directory).                                                   |
+| `userdel -r <username>` | Deletes a user account **and** removes their home directory. <br>Example: `userdel -r terraform` |
+| `su - <username>`       | Switches to another user account (requires password). <br>Example: `su - ansible`                |
+
+---
+
+### 👥 **2. Group Management**
+
+| Command                          | Description                                                                               |
+| -------------------------------- | ----------------------------------------------------------------------------------------- |
+| `groupadd <groupname>`           | Creates a new group. <br>Example: `groupadd devops`                                       |
+| `usermod -aG <group> <username>` | Adds an existing user to a supplementary group. <br>Example: `usermod -aG devops ansible` |
+| `grep <groupname> /etc/group`    | Verifies group membership. <br>Example: `grep devops /etc/group`                          |
+| `cat /etc/group`                 | Displays all existing groups and their members.                                           |
+
+---
+
+### 🗂️ **3. System Information Commands**
+
+| Command                                 | Description                               |
+| --------------------------------------- | ----------------------------------------- |
+| `pwd`                                   | Shows current working directory.          |
+| `ls`                                    | Lists files and directories.              |
+| `cd /path`                              | Changes directory.                        |
+| `cat /etc/passwd`                       | Lists all users registered on the system. |
+| `cat /etc/group`                        | Lists all groups.                         |
+| `head /etc/passwd` / `tail /etc/passwd` | Displays beginning or end of user list.   |
+| `who` / `last`                          | Shows current and previous logins.        |
+| `lsof -u <username>`                    | Lists open files by a specific user.      |
+
+---
+
+### 🧹 **4. Home Directory Management**
+
+| Command              | Description                                                            |
+| -------------------- | ---------------------------------------------------------------------- |
+| `ls /home/`          | Lists user home directories.                                           |
+| `rm -r /home/<user>` | Manually removes a user’s home directory if not deleted automatically. |
+
+---
+
+### ⚙️ **5. Important Files**
+
+| File          | Purpose                                               |
+| ------------- | ----------------------------------------------------- |
+| `/etc/passwd` | Stores user account information.                      |
+| `/etc/group`  | Stores group information.                             |
+| `/etc/shadow` | Stores encrypted passwords (accessible only by root). |
+
+---
+
+### 🧠 **Summary of Your Practice**
+
+You successfully:
+
+* Created multiple users (`ansible`, `aws`, `terraform`, `jenkins`).
+* Created a group named **devops**.
+* Added users to the **devops** group.
+* Set passwords for all users.
+* Verified memberships and IDs.
+* Deleted users and cleaned up their home directories.
+
+✅ This shows a solid understanding of **Linux user and group administration**, an essential skill for DevOps engineers.
+
+---
+
+Would you like me to **convert this summary into a Word (.docx)** or **PDF** document so you can save or submit it for your learning record?
