@@ -1,0 +1,31 @@
+How do you list all running containers?
+docker ps
+How do you stop or remove a container?
+docker rm container-id
+How do you remove all stopped containers?
+docker rmi imd-id.....
+How do you build an image from a Dockerfile?
+
+How do you run a container from an image?
+docker rn image-id
+How do you check the logs of a running container?
+docker logs container-id
+How do you access a container’s shell?
+docker exec -it <container_name> /bin/sh
+What command shows all images on your system?
+docker images
+How do you copy files between the host and the container?
+Use the `docker cp` command:
+***Host → Container:**
+Bash
+docker cp <host_path> <container_name>:<container_path>
+***Container → Host:**
+
+ Bash
+docker cp <container_name>:<container_path> <host_path>
+
+What is the purpose of docker exec, docker ps, and docker inspect?
+**Short answers:**
+docker 'exec` → Runs a command inside a running container.
+docker 'ps`→ ' • Lists running containers.
+docker 'inspect` → Shows detailed configuration and metadata about containers or images.
