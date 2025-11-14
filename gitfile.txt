@@ -1,0 +1,6 @@
+This is my first git file
+Let's start learning git.
+1. Git is a distributed version control system
+2. Git bash is used as a local git setup
+3. Github works as a remote repository management server.
+4. How to update username and email address of git
